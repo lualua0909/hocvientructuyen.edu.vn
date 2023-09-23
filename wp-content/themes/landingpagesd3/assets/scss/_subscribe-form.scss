@@ -1,0 +1,186 @@
+.subscribe-form-wrap {
+	background-image: linear-gradient(90deg, #102F32 0%, #10564C 100%);
+	padding-bottom: 46px;
+	padding-top: 40px;
+	overflow: hidden;
+	@include responsive(md) {
+		background-image: unset;
+		background-color: var(--n-contrast-color);
+		padding-top: 29px;
+		padding-bottom: 109px;
+	}
+	@include responsive(lg) {
+		padding-top: 162px;
+		padding-bottom: 212px;
+	}
+
+	.form-wrap {
+		@include responsive(md) {
+			background-image: url("../images/form-bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding-top: 27px;
+			padding-bottom: 18px;
+			position: relative;
+			z-index: 1;
+			box-shadow: 6px 20px 33px rgba(53, 53, 53, 0.20);
+		}
+		@include responsive(lg) {
+			padding-top: 61px;
+			padding-bottom: 23px;
+		}
+
+		&:after, &:before {
+			@include responsive(md) {
+				content: '';
+				position: absolute;
+				display: block;
+				z-index: -1;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&:before {
+			@include responsive(md) {
+				background-image: url("../images/form-img.png");
+				width: 75px;
+				height: 134px;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		&:after {
+			@include responsive(md) {
+				background-image: url("../images/form-img-2.png");
+				width: 234px;
+				height: 286px;
+				right: -84px;
+				bottom: -16px;
+			}
+			@include responsive(lg) {
+				bottom: -8px;
+			}
+		}
+
+		.form-title {
+			color: #FFF;
+			text-align: center;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 27px;
+			@include responsive(md) {
+				font-size: 20px;
+				margin-bottom: 18px;
+			}
+			@include responsive(lg) {
+				font-size: 32px;
+				margin-bottom: 14px;
+			}
+		}
+
+		.wpforms-container {
+			margin: 0;
+
+			.wpforms-field-container {
+				max-width: 232px;
+				margin: 0 auto;
+				@include responsive(md) {
+					max-width: 270px;
+				}
+				@include responsive(lg) {
+					max-width: 435px;
+				}
+
+				.wpforms-field {
+					margin: 0;
+					padding: 0 0 10px 0;
+
+					.wpforms-field-label {
+						display: none;
+					}
+
+					input, textarea {
+						height: 29px;
+						background: var(--n-white-color);
+						font-size: 12px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						padding: 5px 13px;
+						border-radius: 4px;
+						border: 0;
+						width: 100%;
+						max-width: 100%;
+						color: var(--n-black-color);
+						@include responsive(md) {
+							height: 35px;
+							border-radius: 8px;
+						}
+						@include responsive(lg) {
+							height: 54px;
+							font-size: 18px;
+						}
+
+						&::-webkit-input-placeholder {
+							color: rgba(0, 0, 0, .8);
+						}
+
+						&:-ms-input-placeholder {
+							color: rgba(0, 0, 0, .8);
+						}
+
+						&::placeholder {
+							color: rgba(0, 0, 0, .8);
+						}
+					}
+
+					textarea {
+						height: 60px;
+						@include responsive(md) {
+							height: 74px;
+						}
+						@include responsive(lg) {
+							height: 107px;
+						}
+					}
+				}
+			}
+
+			.wpforms-submit-container {
+				text-align: center;
+				padding: 0;
+				margin-top: 24px;
+
+				button[type=submit] {
+					border-radius: 6px;
+					background-image: linear-gradient(90deg, #F18D15 0%, #F6AE51 83.85%, #F8C67C 100%);
+					min-width: 184px;
+					height: 27px;
+					color: #FFF;
+					text-align: center;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 700;
+					text-transform: uppercase;
+					@include responsive(md) {
+						min-width: 184px;
+						height: 36px;
+						background-image: unset;
+						background-color: #F18D15;
+						border-radius: 8px;
+						font-size: 14px;
+					}
+					@include responsive(lg) {
+						min-width: 184px;
+						height: 44.275px;
+						border-radius: 16px;
+					}
+				}
+			}
+		}
+	}
+}

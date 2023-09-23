@@ -1,0 +1,207 @@
+.training-route-wrapper {
+	padding-top: 30px;
+	padding-bottom: 35px;
+	overflow: hidden;
+	@include responsive(md) {
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+	@include responsive(lg) {
+		padding-top: 100px;
+		padding-bottom: 90px;
+	}
+
+	.title {
+		color: var(--n-primary-color);
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: 0.32px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		@include responsive(md) {
+			font-size: 20px;
+			margin-bottom: 60px;
+		}
+		@include responsive(lg) {
+			font-size: 40px;
+			margin-bottom: 130px;
+		}
+	}
+
+	.text-box {
+		position: relative;
+		margin-bottom: 50px;
+		z-index: 1;
+		@include responsive(md) {
+			margin-bottom: 100px;
+		}
+		@include responsive(lg) {
+			margin-bottom: 175px;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			z-index: -1;
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		&:nth-child(3n+1) {
+			&:before {
+				background-image: url("../images/part-1.png");
+				left: 0;
+				top: 0;
+				width: 250px;
+				height: 373px;
+				@include responsive(md) {
+					width: 300px;
+					height: 470px;
+				}
+				@include responsive(lg) {
+					top: -240px;
+					width: 828px;
+					height: 1233px;
+				}
+			}
+		}
+
+		&:nth-child(3n+2) {
+			&:before {
+				background-image: url("../images/part-2.png");
+				right: 0;
+				top: 0;
+				width: 250px;
+				height: 393px;
+				@include responsive(md) {
+					width: 300px;
+					height: 448px;
+				}
+				@include responsive(lg) {
+					top: -110px;
+					width: 885px;
+					height: 1389px;
+				}
+			}
+		}
+
+		&:nth-child(3n+3) {
+			&:before {
+				background-image: url("../images/part-3.png");
+				left: 0;
+				top: 0;
+				width: 250px;
+				height: 192px;
+				@include responsive(md) {
+					width: 300px;
+					height: 231px;
+				}
+				@include responsive(lg) {
+					top: -110px;
+					width: 859px;
+					height: 659px;
+				}
+			}
+		}
+
+		.text-box-content {
+			.text-box-title {
+				color: #333;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-bottom: 15px;
+				@include responsive(md) {
+					font-size: 14px;
+				}
+				@include responsive(lg) {
+					font-size: 30px;
+				}
+			}
+
+			.text-box-list {
+				color: #333;
+
+				li {
+					font-size: 10px;
+					font-weight: 400;
+					font-style: normal;
+					position: relative;
+					padding-left: 21px;
+					margin-bottom: 12px;
+					@include responsive(md) {
+						font-size: 12px;
+						padding-left: 28px;
+					}
+					@include responsive(lg) {
+						font-size: 22px;
+						padding-left: 44px;
+						margin-bottom: 19px;
+					}
+
+					span {
+						font-weight: 700;
+					}
+
+					.icon {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 16px;
+						height: 16px;
+						text-align: center;
+						@include responsive(md) {
+							width: 21px;
+							height: 21px;
+						}
+						@include responsive(lg) {
+							width: 30px;
+							height: 30px;
+							top: -2px;
+						}
+
+						img {
+							max-width: 16px;
+							max-height: 16px;
+							width: 100%;
+							height: auto;
+							@include responsive(md) {
+								max-width: 21px;
+								max-height: 21px;
+							}
+							@include responsive(lg) {
+								max-width: 30px;
+								max-height: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.training-route-desc {
+		.desc {
+			color: #000;
+			font-size: 10px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.6;
+			@include responsive(md) {
+				font-size: 14px;
+			}
+			@include responsive(lg) {
+				font-size: 22px;
+				font-weight: 500;
+			}
+		}
+
+		.button-wrap {
+			margin-top: 40px;
+		}
+	}
+}

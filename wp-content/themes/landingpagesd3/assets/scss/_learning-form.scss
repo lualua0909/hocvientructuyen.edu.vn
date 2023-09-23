@@ -1,0 +1,63 @@
+.learning-form-wrap {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 28px;
+	padding-bottom: 35px;
+	@include responsive(md) {
+		padding-top: 78px;
+		padding-bottom: 60px;
+	}
+	@include responsive(lg) {
+		padding-top: 127px;
+		padding-bottom: 90px;
+	}
+
+	.title {
+		color: var(--n-white-color);
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: 0.32px;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+		@include responsive(md) {
+			display: none;
+		}
+	}
+
+	.img-wrap-mobile {
+		text-align: center;
+		@include responsive(md) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.img-wrap {
+		text-align: center;
+		display: none;
+		@include responsive(md) {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.button-wrap {
+		margin-top: 30px;
+		@include responsive(md) {
+			margin-top: 43px;
+		}
+		@include responsive(lg) {
+			margin-top: 70px;
+		}
+	}
+}

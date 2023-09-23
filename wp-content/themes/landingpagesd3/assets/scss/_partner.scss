@@ -1,0 +1,114 @@
+.partner-wrap {
+	background-color: #F6FBF9;
+	padding-top: 18px;
+	padding-bottom: 35px;
+	overflow: hidden;
+	@include responsive(md) {
+		padding-top: 29px;
+		padding-bottom: 49px;
+	}
+	@include responsive(lg) {
+		padding-top: 76px;
+		padding-bottom: 88px;
+	}
+
+	.partner-title {
+		color: var(--n-primary-color);
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: 0.28px;
+		text-transform: uppercase;
+		margin-bottom: 14px;
+		@include responsive(md) {
+			font-size: 20px;
+			letter-spacing: 0.4px;
+			margin-bottom: 35px;
+		}
+		@include responsive(lg) {
+			font-size: 40px;
+			margin-bottom: 46px;
+			letter-spacing: 0.8px;
+		}
+	}
+
+	.partner-slider-wrap {
+		.partner-slider {
+			.slick-arrow {
+				font-size: 0;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				background-color: transparent;
+				color: var(--n-primary-color);
+				position: absolute;
+				z-index: 1;
+				top: 50%;
+				@include translate(0, -50%);
+
+				&:before {
+					font-family: "Font Awesome 6 Free";
+					font-weight: 900;
+					font-size: 20px;
+					@include responsive(md) {
+						font-size: 30px;
+					}
+				}
+
+				&.slick-next {
+					right: 0;
+					@include responsive(md) {
+						right: -15px;
+					}
+
+					&:before {
+						content: '\f105';
+					}
+				}
+
+				&.slick-prev {
+					left: 0;
+					@include responsive(md) {
+						left: -15px;
+					}
+
+					&:before {
+						content: '\f104';
+					}
+				}
+			}
+
+			.partner-item-wrap {
+				.partner-item {
+					text-align: center;
+					padding: 5px;
+					@include flexbox();
+					@include align-items(center);
+					@include justify-content(center);
+					min-height: 60px;
+					@include responsive(md) {
+						min-height: 89px;
+						padding: 5px 13px;
+					}
+					@include responsive(lg) {
+						min-height: 139px;
+						padding: 5px 19px;
+					}
+
+					img {
+						max-width: 100%;
+						max-height: 46px;
+						margin: 0 auto;
+						@include responsive(md) {
+							max-height: 89px;
+						}
+						@include responsive(lg) {
+							max-height: 139px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

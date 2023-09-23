@@ -1,0 +1,15 @@
+a,
+button,
+input {
+	transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+a {
+	text-decoration: none;
+	color: var(--n-link-color);
+}
+
+a:hover,
+a:focus {
+	color: var(--n-link-hover-color);
+}

@@ -1,0 +1,171 @@
+.capacity-wrap {
+	background-image: url("../images/capacity-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 20px;
+	padding-bottom: 65px;
+	@include responsive(md) {
+		padding-top: 65px;
+		padding-bottom: 100px;
+	}
+	@include responsive(xl) {
+		padding-top: 80px;
+		padding-bottom: 200px;
+	}
+
+	.title {
+		color: var(--n-primary-color);
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: 0.32px;
+		text-transform: uppercase;
+		margin-bottom: 45px;
+		@include responsive(md) {
+			font-size: 20px;
+			letter-spacing: 0.4px;
+		}
+		@include responsive(xl) {
+			font-size: 39px;
+			letter-spacing: 0.78px;
+			margin-bottom: 100px;
+		}
+	}
+
+	.text-box-wrap {
+		margin-bottom: 65px;
+		position: relative;
+
+		.text-box {
+			background-image: linear-gradient(210deg, #FFF 0%, #3B3B3B 100%);
+			position: relative;
+			border-radius: 20px;
+			z-index: 1;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto;
+			padding: 40px 18px 15px 18px;
+			@include responsive(xl) {
+				width: 277px;
+				height: 277px;
+				border-radius: 30px;
+				padding: 65px 20px 25px 20px;
+			}
+
+			.part-1 {
+				position: absolute;
+				right: -6.5px;
+				top: 32px;
+				bottom: 32px;
+				background-image: linear-gradient(90deg, #102F32 0%, #10564C 100%);
+				display: block;
+				width: 6.5px;
+				border-radius: 0 20px 20px 0;
+				@include responsive(xl) {
+					right: -12px;
+					width: 12px;
+					top: 60px;
+					bottom: 60px;
+				}
+			}
+
+			.part-2 {
+				position: absolute;
+				bottom: -6.5px;
+				left: 32px;
+				right: 32px;
+				background-image: linear-gradient(90deg, #102F32 0%, #10564C 100%);
+				display: block;
+				height: 6.5px;
+				border-radius: 0 0 20px 20px;
+				@include responsive(xl) {
+					bottom: -12px;
+					height: 12px;
+					left: 60px;
+					right: 60px;
+				}
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				background-color: #fff;
+				top: 4px;
+				right: 4px;
+				bottom: 4px;
+				left: 4px;
+				display: block;
+				z-index: -1;
+				border-radius: 16px;
+				@include responsive(xl) {
+					top: 7px;
+					right: 7px;
+					bottom: 7px;
+					left: 7px;
+					border-radius: 23px;
+				}
+			}
+
+			&:after {
+				content: attr(data-num);
+				font-size: 130px;
+				background: -webkit-linear-gradient(90deg, #102F32 0%, #10564C 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-weight: 900;
+				position: absolute;
+				top: 50%;
+				@include translate(0, -50%);
+				left: -55px;
+				z-index: -2;
+				@include responsive(xl) {
+					font-size: 210px;
+					left: -83px;
+				}
+			}
+
+			.icon {
+				position: absolute;
+				left: 50%;
+				top: -28px;
+				width: 56px;
+				height: 56px;
+				border-radius: 100px;
+				background-image: linear-gradient(90deg, #F18D15 0%, #F6AE51 83.85%, #F8C67C 100%);
+				border: 3px solid #fff;
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(center);
+				@include translate(-50%, 0);
+				@include responsive(xl) {
+					width: 105px;
+					height: 105px;
+					top: -52px;
+				}
+
+				img {
+					max-height: 22px;
+					max-width: 22px;
+					@include responsive(xl) {
+						max-height: 33px;
+						max-width: 33px;
+					}
+				}
+			}
+
+			.text {
+				color: #282828;
+				text-align: center;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 700;
+				text-transform: uppercase;
+				@include responsive(xl) {
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}

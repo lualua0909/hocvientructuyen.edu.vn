@@ -1,0 +1,40 @@
+.header-wrap {
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 12px 0;
+	@include responsive(md) {
+		padding: 18px 0;
+	}
+	@include responsive(lg) {
+		padding: 37px 0;
+	}
+
+	.img-left {
+		img {
+			max-height: 32px;
+			@include responsive(md) {
+				max-height: 43px;
+			}
+			@include responsive(lg) {
+				max-height: 107px;
+			}
+		}
+	}
+
+	.img-right {
+		text-align: right;
+
+		img {
+			max-height: 47px;
+			@include responsive(md) {
+				max-height: 63px;
+			}
+			@include responsive(lg) {
+				max-height: 136px;
+			}
+		}
+	}
+}

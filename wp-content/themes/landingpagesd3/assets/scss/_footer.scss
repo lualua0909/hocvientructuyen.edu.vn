@@ -1,0 +1,204 @@
+.footer-wrap {
+	background-color: #102F32;
+	padding-top: 38px;
+	padding-bottom: 39px;
+	@include responsive(md) {
+		background-color: unset;
+		background-image: linear-gradient(90deg, #102F32 0%, #10564C 100%);
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	@include responsive(lg) {
+		background-color: #102F32;
+		background-image: unset;
+		padding-top: 41px;
+		padding-bottom: 35px;
+	}
+
+	.footer-img {
+		text-align: center;
+		margin-bottom: 14px;
+		@include responsive(md) {
+			margin-bottom: 21px;
+		}
+
+		img {
+			max-height: 39px;
+			@include responsive(md) {
+				max-height: 53px;
+			}
+			@include responsive(lg) {
+				max-height: 100%;
+			}
+		}
+	}
+
+	.contact-info {
+		margin-bottom: 16.5px;
+
+		li {
+			color: var(--n-white-color);
+			text-align: center;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.875;
+			@include responsive(lg) {
+				text-align: left;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.form-wrap {
+		margin-bottom: 16px;
+		@include responsive(lg) {
+			@include flexbox();
+			@include flex-wrap(wrap);
+			@include justify-content(flex-end);
+		}
+
+		.form-title {
+			color: var(--n-white-color);
+			text-align: center;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.75;
+			margin-bottom: 16.5px;
+			@include responsive(lg) {
+				font-size: 14px;
+				line-height: 1.5;
+				text-align: right;
+				max-width: 100%;
+				@include flex-basis(100%);
+			}
+		}
+
+		.wpforms-container {
+			max-width: 266px;
+			margin: 0 auto;
+			position: relative;
+			@include responsive(lg) {
+				margin: 0;
+				max-width: 273px;
+				@include flex-basis(273px);
+			}
+
+			.wpforms-field-container {
+				.wpforms-field {
+					margin: 0;
+					padding: 0;
+
+					.wpforms-field-label {
+						display: none;
+					}
+
+					input {
+						height: 43px;
+						background: var(--n-white-color);
+						font-size: 12px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						padding: 10px 50px 10px 19px;
+						border-radius: 0;
+						border: 0;
+						width: 100%;
+						max-width: 100%;
+
+						&::-webkit-input-placeholder {
+							color: #6C757D;
+						}
+
+						&:-ms-input-placeholder {
+							color: #6C757D;
+						}
+
+						&::placeholder {
+							color: #6C757D;
+						}
+					}
+				}
+			}
+
+			.wpforms-submit-container {
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				top: 4px;
+				right: 4px;
+				width: 35px;
+				height: 33px;
+
+				button[type=submit] {
+					background-color: var(--n-secondary-color);
+					width: 35px;
+					height: 33px;
+					border-radius: 6px;
+					border: 0;
+					text-indent: -9999px;
+					background-image: url("../images/plane.png");
+					background-size: 18px;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	.social-wrap {
+		text-align: center;
+		@include responsive(lg) {
+			padding-top: 50px;
+		}
+
+		.social-text {
+			color: #FFF;
+			font-size: 10px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 2.1;
+			display: inline-block;
+			margin-right: 5px;
+			margin-bottom: 0;
+			@include responsive(lg) {
+				font-size: 14px;
+				line-height: 1.5;
+			}
+		}
+
+		a {
+			display: inline-block;
+			@include responsive(lg) {
+				margin: 0 8px;
+			}
+
+			img {
+				max-width: 14px;
+				max-height: 14px;
+				@include responsive(lg) {
+					max-width: 28px;
+					max-height: 28px;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		display: none;
+		@include responsive(lg) {
+			display: block;
+			color: #FFF;
+			text-align: right;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 1.75;
+			margin-bottom: 0;
+			margin-top: 26px;
+			max-width: 100%;
+			@include flex-basis(100%);
+		}
+	}
+}

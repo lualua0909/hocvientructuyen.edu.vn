@@ -1,0 +1,36 @@
+.hero-2-wrap {
+	text-align: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 60%;
+	@include responsive(md) {
+		padding-bottom: 52.5%;
+	}
+
+	.button-wrap {
+		text-align: right;
+		position: absolute;
+		bottom: 5%;
+		right: 6%;
+		@include responsive(md) {
+			right: 11%;
+			bottom: 6%;
+		}
+
+		.n-button {
+			font-size: 10px;
+			padding: 8px 17px;
+			@include responsive(md) {
+				font-size: 14px;
+				padding: 11px 24px;
+			}
+			@include responsive(lg) {
+				font-size: 16px;
+				padding: 16px 39px;
+			}
+		}
+	}
+}

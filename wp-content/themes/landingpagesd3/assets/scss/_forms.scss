@@ -1,0 +1,83 @@
+.button, button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.wp-block-button__link:not(.has-background) {
+	background: var(--n-primary-color);
+	color: var(--n-white-color);
+	border: 1px solid transparent;
+	cursor: pointer;
+	-webkit-appearance: button;
+	padding: 8px 15px;
+}
+
+.button:focus, button:focus,
+.button:hover, button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+a.wp-block-button__link:not(.has-background):hover {
+	color: var(--n-white-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
+textarea,
+select {
+	border: 1px solid #ced4da;
+	padding: 8px 15px;
+	width: 100%;
+	max-width: 100%;
+	color: var(--n-base-color);
+	background-color: var(--n-contrast-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+textarea,
+select {
+	border: 1px solid #999;
+	outline: none;
+}
+
+textarea {
+	width: 100%;
+}
+
+:-ms-input-placeholder {
+	color: #333;
+	opacity: 1;
+}
+
+::placeholder {
+	color: #333;
+	opacity: 1;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
